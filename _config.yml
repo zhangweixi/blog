@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 樵之夫
+title: 浓得化不开
 #subtitle: 无意带将花数朵，竟挑蝴蝶下山来
 description: zhang
 keywords: key
@@ -41,7 +41,7 @@ future: true
 highlight:
   enable: true
   line_number: true
-  auto_detect: false
+  auto_detect: true
   tab_replace:
   
 # Home page setting
@@ -83,3 +83,5 @@ deploy:
   type: git
   repo: git@github.com:zhangweixi/zhangweixi.github.io.git
   branch: master
+
+shareto : true

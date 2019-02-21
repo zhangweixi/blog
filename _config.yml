@@ -81,7 +81,8 @@ theme: maupassant
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:zhangweixi/zhangweixi.github.io.git
+  #repo: git@github.com:zhangweixi/zhangweixi.github.io.git
+  repo: https://GH_TOKEN@github.com/zhangweixi/zhangweixi.github.io.git
   branch: master
 
 shareto : true

@@ -108,5 +108,17 @@ css: css
 # Theme version
 version: 0.0.0
 
+mathjax: true
 
-#test
+math:
+  engine: 'katex' # or 'katex' | 'mathjax'
+  mathjax:
+    src: custom_mathjax_source
+    config:
+      enable: true
+      # MathJax config
+  katex:
+    css: custom_css_source
+    js: custom_js_source # not used
+    config:
+      # KaTeX config

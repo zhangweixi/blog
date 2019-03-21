@@ -87,12 +87,14 @@ deploy:
   branch: master
 
 shareto : true
+mathjax: true
 
 math:
-  engine: 'mathjax' # or 'katex'
+  engine: 'katex' # or 'katex' | 'mathjax'
   mathjax:
     src: custom_mathjax_source
     config:
+      enable: true
       # MathJax config
   katex:
     css: custom_css_source

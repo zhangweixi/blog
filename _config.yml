@@ -106,3 +106,7 @@ math:
     js: custom_js_source # not used
     config:
       # KaTeX config
+flowchart:
+  # raphael:   # optional, the source url of raphael.js
+  # flowchart: # optional, the source url of flowchart.js
+  options: flowchart # options used for `drawSVG`

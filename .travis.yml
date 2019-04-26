@@ -1,7 +1,7 @@
 # 指定语言为node_js，nodejs版本stable
 language: node_js
 #node_js: stable
-node_js: 6
+node_js: 8
 
 #env:
 #  - TRAVIS_NODE_VERSION="10.15.3"

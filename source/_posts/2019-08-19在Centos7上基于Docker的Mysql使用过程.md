@@ -7,6 +7,7 @@ categories:
   - Docker
   - MySQL
 toc: false
+description: 低版本的mysql客户端高版本的mysql服务器时，将因为用户名的加密方式不一致导致客户端无法登陆，此时要么修改客户端的加密方式或者修改服务端的加密方式。
 date: 2019-08-19 16:12:43
 ---
 

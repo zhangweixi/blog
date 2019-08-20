@@ -1,5 +1,5 @@
 ---
-title: Centos7上基于Docker的Mysql使用过程
+title: Centos7上基于Docker的Mysql使用过程（一）
 tags:
   - MySQL
   - Docker
@@ -7,7 +7,8 @@ categories:
   - Docker
   - MySQL
 toc: false
-description: 低版本的mysql客户端高版本的mysql服务器时，将因为用户名的加密方式不一致导致客户端无法登陆，此时要么修改客户端的加密方式或者修改服务端的加密方式。
+description: >-
+  低版本的mysql客户端连接高版本的mysql服务器时，将因为用户名的加密方式不一致导致客户端无法登陆，此时，要么修改客户端的加密方式，要么修改服务端的加密方式。本文主要讲解了如何安装以及如何修改密码，并通过外网连接上服务端。
 date: 2019-08-19 16:12:43
 ---
 
@@ -55,7 +56,7 @@ Authentication plugin 'caching_sha2_password' cannot be loaded: /usr/local/mysql
 #### 解决方式：
 ```shell
 docker exec -it mysql2 /bin/bash # 进入mysql容器:
-mysql:mysql -uroot -pmima #进入mysql
+mysql -uroot -pmima #进入mysql
 ALTER USER 'root'@'%' IDENTIFIED WITH mysql_native_password BY '你的密码'; #修改密码和加密方式
 flush privileges; #刷新权限
 exit # 退出mysql

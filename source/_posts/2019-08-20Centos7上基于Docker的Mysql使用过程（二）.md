@@ -1,5 +1,5 @@
 ---
-title: Centos7上基于Docker的Mysql使用过程（二）——修改数据目录
+title: '![image.png](/images/2019/08/20/e878d190-c2fc-11e9-acf4-e97ea1e6a762.png)'
 tags:
   - Docker
   - MySQL
@@ -10,6 +10,7 @@ toc: false
 date: 2019-08-20 10:38:15
 ---
 
+![image.png](/images/2019/08/20/e878d190-c2fc-11e9-acf4-e97ea1e6a762.png)
 ## 目标
 修改容器的数据目录
 

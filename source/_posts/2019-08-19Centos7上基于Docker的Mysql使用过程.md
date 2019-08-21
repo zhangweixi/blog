@@ -1,5 +1,5 @@
 ---
-title: Centos7上基于Docker的Mysql使用过程（一）
+title: 基于Docker的Mysql使用过程（一）——安装
 tags:
   - MySQL
   - Docker

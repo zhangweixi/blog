@@ -1,7 +1,9 @@
 ---
 title: STM32模板文件构建
-tags: []
-categories: []
+tags:
+  - STM32
+categories:
+  - 嵌入式
 toc: false
 date: 2020-03-04 22:43:23
 ---

@@ -102,7 +102,7 @@ share:
 
 # Github
 github: 
-  username: cofess  # github username
+  username: zhangweixi  # github username
 
 # Comment
 # Gitment
@@ -127,8 +127,9 @@ comment:
     ClientID:  #必须. GitHub Application Client ID.
     ClientSecret:  #必须. GitHub Application Client Secret.
   valine: # Valine. https://valine.js.org
-    appid:  # your leancloud application appid
-    appkey:  # your leancloud application appkey
+    enable: true ## If you want to use Valine comment system, please set the value to true.
+    appid: KqWtV5KsyHKmNhjMICxaFBHA-gzGzoHsz ## Your LeanCloud application App ID, e.g. pRBBL2JR4N7kLEGojrF0MsSs-gzGzoHsz
+    appkey: Lx9nObvwBF2JRwY0alUaMCDT ## Your LeanCloud application App Key, e.g. tjczHpDfhjYDSYddzymYK1JJ
     notify: false # mail notifier , https://github.com/xCss/Valine/wiki
     verify: false # Verification code
     placeholder: Just go go # comment box placeholder
@@ -190,7 +191,7 @@ profile:
   author_title: Web Developer & ARM Developer
   author_description: 个人简介。
   location: Shanghai, China
-  follow: https://github.com/cofess
+  follow: https://github.com/zhangweixi
   # Social Links
   social:
     links:

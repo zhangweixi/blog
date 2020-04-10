@@ -9,3 +9,11 @@
         </div>
     </div>
 </footer>
+
+<script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="/vendors/prettify/prettify.js"></script>
+<script type="text/javascript">
+$(window).load(function(){
+$('pre').addClass('prettyprint').attr('style', 'overflow:auto;');
+	prettyPrint();
+})

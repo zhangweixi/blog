@@ -14,7 +14,7 @@ date: 2019-09-17 11:59:40
 每个用户在使用conda的时候，都必须要指定一种shell类型，如bash,fish，tcsh,zsh等，当在安装conda的时候，其实安装过程中已经进行了这样的初始化操作。因而当使用conda activate 命令的时候，能够成功的执行。假设这个时候使用的是root用户进行安装的。
 
 除了base环境外，现在，新建一个环境
-```shell
+```bash
 [root]# conda create -n flask python=2.7
 
 #现在有两个虚拟环境
@@ -29,7 +29,7 @@ flask                    /usr/local/anaconda3/envs/flask
 1. 切换到用户www
 2. 查看conda有哪些环境
 3. 进入flask环境
-```shell
+```bash
 [root]# su www
 [www]# conda env list
 base                  *  /usr/local/anaconda3
@@ -55,7 +55,7 @@ IMPORTANT: You may need to close and restart your shell after running 'conda ini
 
 ```
 从以上结果可以看出，conda是生效的，但是当前用户却无法激活某个环境，那是因为目前还没有初始化当前用户在使用conda时应该使用什么shell.查看用户目录下的.bashrc文件，内容如下：
-```shell
+```bash
 [www]# vim ~/.bashrc
 
 #============================内容如下=======================================
@@ -76,7 +76,7 @@ fi
 ```
 
 如果你的情况如上，没有关于任何conda init相关的任何内容，那么就表明确实没有初始化，现在来初始化：
-```shell
+```bash
 [zhangweixi@dev001 ~]$ conda init bash
 no change     /usr/local/anaconda3/condabin/conda
 no change     /usr/local/anaconda3/bin/conda
@@ -94,7 +94,7 @@ modified      /home/zhangweixi/.bashrc
 ==> For changes to take effect, close and re-open your current shell. <==
 ```
 如果输出这样的信息，表示初始化成功，再看.bashrc文件，内容如下：
-```shell
+```bash
 [zhangweixi@dev001 ~]$ vim ~/.bashrc
 #=======================内容如下===========================
 # .bashrc
@@ -127,7 +127,7 @@ unset __conda_setup
 
 ```
 由此可以看出，conda在该文件中写入了一些东西，那么这个试试来试试能激活环境吗？
-```shell
+```bash
 [zhangweixi@dev001 ~]$ conda activate flask
 
 CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
@@ -153,7 +153,7 @@ IMPORTANT: You may need to close and restart your shell after running 'conda ini
 
 ### 在shell脚本中激活环境
 现在来编写一个很简单的shell，如下：
-```shell
+```bash
 [www]# vim test.sh
 #==================内如如下==============
 #!/bin/bash
@@ -179,7 +179,7 @@ See 'conda init --help' for more information and options.
 IMPORTANT: You may need to close and restart your shell after running 'conda init'.
 ```
 操蛋，居然不行，直接告诉如何操作把，把.bashrc文件中初始化conda的那一段代码复制到test.sh文件的上面，变成这样:
-```shell
+```bash
 #=========================test.sh内如如下=========================
 #!/bin/bash
 # >>> conda initialize >>>

@@ -1,1 +1,2 @@
 # blog
+thanks for hexo

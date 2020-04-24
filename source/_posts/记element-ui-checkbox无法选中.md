@@ -11,14 +11,10 @@ element-ui在某些情况下无法选中，本文记录一些自己遇到的问�
 
 ```html
 <el-form-item label='选项'>
-	<el-checkbox-group v-model="form.type">		
-	<el-checkbox v-for="(item,index) in types" 
-			:key="index" 
-			:label="item.name"  
-			:value="item.value" 
-			name="type">
-	</el-checkbox>
-	</el-checkbox-group>
+    <el-checkbox-group v-model="form.type">		
+    <el-checkbox v-for="(item,index) in types" :key="index" :label="item.name"  :value="item.value" name="type">
+    </el-checkbox>
+</el-checkbox-group>
 </el-form-item>
 
 <script>

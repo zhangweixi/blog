@@ -156,9 +156,7 @@ async function demo10(){
 ```
 由上看出，当有await时，await作用的对象返回的是promise的resolve后的值，而没有的时候，则是promise本身，这就体现出来了，以前要获取异步的结果，需要调用then方法才行，现在就不需要了
 
-```js
 
-```
 
 ### wait后的方法是同步执行的
 ```js

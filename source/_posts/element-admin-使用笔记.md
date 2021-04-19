@@ -2,10 +2,10 @@
 title: element-admin 使用笔记
 tags:
   - JS
-originContent: ''
 categories:
   - JS
 toc: false
+description: 使用element-admin的项目经验
 date: 2021-04-19 15:26:26
 ---
 
@@ -102,6 +102,3 @@ proxy: {
     }
 }
 ```
-
-
-

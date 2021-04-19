@@ -187,8 +187,8 @@ profile:
   enabled: true # Whether to show profile bar
   avatar: images/avatar.jpg
   gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
-  author: 樵夫
-  author_title: Web Developer & ARM Developer
+  author: 浓得化不开
+  author_title: 一个欠缺灵魂的码工
   author_description: 个人简介。
   location: Shanghai, China
   follow: https://github.com/zhangweixi

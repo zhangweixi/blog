@@ -9,10 +9,13 @@ date: 2020-04-27 17:30:26
 ---
 
 ## 条件
+
 你需要先了解Promise的使用方式
 
 ## async
+
 async是一个函数修饰符，使得这个函数返回的是promise,如：
+
 ```js
 async function demo1(){
     return "message";
@@ -36,6 +39,7 @@ demo1().then(function(msg){
 
 });
 ```
+
 看到上面的typeof demo1()了吧，返回的是一个promise,所以他自然是可以调用then方法的
 
 那么问题来了，这里的then方法何时触发，因为这里的then其实就是promise中调用了resolve,可是async的resolve是何时触发的呢，那就是这个函数执行完毕，就会触发，这个触发的过程是隐形的，代码不可见的。
@@ -93,13 +97,15 @@ async function demo6(){
 }
 demo6().then(msg=>console.log(msg));    //打印结果：cccc
 ```
+
 由上面的实验可以看出，如果async函数返回的是字符串，那么它将把字符串当做resolve的参数，如果返回是的一个promise，那么将用这个promise替换掉自己默认的promise，但是从最后一个实例看出来，返回的对象只要含有then方法，就可以覆盖async本身的then
 
-## wait 
+## wait
 
 ### await只能在async函数中使用
 
 wait就是要等，什么情况下需要等呢，同步需要等吗，不需要，因为同步本来就是顺序执行的，wait的目的就是要将异步变为同步,wait等待的对象需要时异步执行的对象，同时wait也需要在异步环境中才有效，即async函数中
+
 ```js
 //demo6().then(msg=>console.log(msg));
 function demo7(){
@@ -126,6 +132,7 @@ async function demo9(){
 }
 demo9().then(msg=>console.log(msg));//打印结果：10
 ```
+
 由上可知，wait只能在async函数中运行，但是wait后面的等待是否是Promise并没有任何关系
 
 ### await返回的是异步执行后的结果，不再需要then
@@ -133,7 +140,6 @@ demo9().then(msg=>console.log(msg));//打印结果：10
 下面，来验证wait发生的作用是什么
 
 ```js
-
 async function asyncSay(msg,ms){
     return new Promise(function(resolve,reject){
         setTimeout(function(){
@@ -154,13 +160,12 @@ async function demo10(){
     //say1 
 }
 ```
+
 由上看出，当有await时，await作用的对象返回的是promise的resolve后的值，而没有的时候，则是promise本身，这就体现出来了，以前要获取异步的结果，需要调用then方法才行，现在就不需要了
 
-
-
 ### wait后的方法是同步执行的
-```js
 
+```js
 async function asyncSay(msg,ms){
     return new Promise(function(resolve,reject){
         setTimeout(function(){
@@ -193,9 +198,11 @@ demo12();
 1000 --- msg2
 */
 ```
+
 由上面的实验可知，加了wait的函数将把异步任务变成同步来执行，谁在前谁就先执行
 
 ### 另外一个奇怪的现象
+
 ```js
 async function demo13(){
     new Promise((resolve,reject)=>{
@@ -227,6 +234,7 @@ demo14();
 打印结果
 2000
 */
-
 ```
+
 上面这个加了await,只执行了第一个Promise，为什么呢？？？？
+
